@@ -129,39 +129,36 @@ src/
 
 ## Design system
 
-**Palette** — ColorHunt `59B292 / FFC94D / FAE7CB / FA6781`:
+**Palette** — monochrome + a single gold accent (per the brief):
 
 | Token | Light | Dark | Used for |
 |---|---|---|---|
-| `paper` | cream `#FAE7CB` | dark teal | page background |
-| `paper-deep` | darker cream | lifted teal | section bands |
-| `paper-card` | lighter cream | lifted teal | card surfaces |
-| `ink` | dark teal `#194138` | warm cream | text + primary CTA |
-| `ink-soft` | muted sage-grey | lifted sage | muted text, borders |
-| `gold` | `#FFC94D` | `#FFC94D` | THE primary accent — CTAs, headlines |
-| `gold-soft` | faint cream-gold | dark gold tint | washes |
-| `coral` | `#FA6781` | lifted coral | warm/urgent — intent score, blinking caret |
-| `coral-soft` | faint pink wash | dark coral tint | intent-score block bg |
-| `sage` | `#59B292` | lifted sage | live/positive — proof ping dots, lead-card status |
-| `rule` | medium cream | dark teal | borders |
+| `paper` | `#FAFAF7` warm off-white | `#0A0A09` near-black | page background |
+| `paper-deep` | `#F2F2EF` | lifted dark | section bands |
+| `paper-card` | white | lifted dark | card surfaces |
+| `ink` | `#0F0F0E` deep charcoal | warm off-white | text + primary CTA |
+| `ink-soft` | `#6B6B68` mid gray | lighter mid gray | muted text, borders |
+| `gold` | `#FFC94D` | `#FFC94D` | THE accent — CTAs, highlights, intent score |
+| `gold-deep` | `#D69A1E` | lifted | hover state |
+| `gold-soft` | very pale gold wash | dark gold tint | washes, success-state bg |
+| `rule` | `#E5E5E2` | dark hairline | borders |
 
-**Three accent roles, each with a job:**
-- **gold** — primary brand accent: CTAs, kicker chip, italic headline emphasis,
-  Differentiators icon badges.
-- **coral** — "warm/urgent" cue: intent-score block bg + label, blinking
-  caret in the lead-card reply preview.
-- **sage** — "live/positive" cue: animated ping dots on the proof line in
-  Hero and Final CTA, lead-card status indicator.
+**ONE accent — gold.** Everything else is grayscale. Primary CTAs go
+ink-on-paper (charcoal on off-white). Gold is reserved for highlight
+moments: the Hero kicker chip, the intent-score block, the success state
+banner, and the Final CTA conversion button.
 
-Primary CTAs go ink-on-paper (dark teal on cream). Gold is reserved for the
-highlight moments, including the conversion button in the Final CTA.
+The high-contrast monochrome base means **WCAG AAA** body contrast in both
+modes — ~21:1 for ink on paper, ~7.5:1 for ink-soft.
 
 **Typography** — Instrument Serif (display, `h1–h4`) + Geist Sans (body) +
 Geist Mono. All via `next/font/google`, self-hosted.
 
-**Page rhythm** — cream / cream-deep / cream / **dark teal** / cream /
-cream-deep / cream / **dark teal** / cream-deep (footer). Two dark "punch"
-moments bookend the middle (Differentiators + Final CTA).
+**Page rhythm** — paper / paper-deep / paper / **dark band** / paper /
+paper-deep / paper / **dark band** / paper-deep (footer). Two dark "punch"
+moments bookend the middle (Differentiators + Final CTA). The `bg-ink`
+sections auto-flip between modes (charcoal-on-page in light, off-white-on-page
+in dark).
 
 ---
 

@@ -125,7 +125,7 @@ function LeadCard() {
           </p>
 
           {/* ── Intent score block ───────────────────────── */}
-          <div className="rounded-xl border border-coral/40 bg-coral-soft/70 px-4 py-3.5 mb-4">
+          <div className="rounded-xl border border-gold/40 bg-gold-soft/70 px-4 py-3.5 mb-4">
             <div className="flex items-baseline justify-between mb-2">
               <div className="flex items-baseline gap-1.5">
                 <span className="font-display text-4xl leading-none text-ink">
@@ -133,7 +133,7 @@ function LeadCard() {
                 </span>
                 <span className="text-sm text-ink-soft">/ 100</span>
               </div>
-              <span className="text-xs font-medium uppercase tracking-[0.12em] text-coral-deep">
+              <span className="text-xs font-medium uppercase tracking-[0.12em] text-gold-deep">
                 {card.intentLabel}
               </span>
             </div>
@@ -167,7 +167,7 @@ function LeadCard() {
               ))}
               <span
                 aria-hidden
-                className="inline-block w-2 h-3.5 bg-coral animate-pulse ml-0.5 align-baseline -mb-0.5"
+                className="inline-block w-2 h-3.5 bg-gold animate-pulse ml-0.5 align-baseline -mb-0.5"
               />
             </div>
           </div>
@@ -194,7 +194,7 @@ function LeadCard() {
         {/* Quiet status footer */}
         <div className="px-5 py-2.5 border-t border-rule/60 flex items-center justify-between text-[11px] text-ink-soft">
           <span className="inline-flex items-center gap-1.5">
-            <CircleDot size={10} className="text-sage" />
+            <CircleDot size={10} className="text-gold" />
             5 of 12 leads today
           </span>
           <span className="font-mono uppercase tracking-wider">guardrails on</span>
@@ -213,7 +213,7 @@ function IntentBar({ value }: { value: number }) {
         whileInView={{ width: `${value}%` }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 1.1, ease }}
-        className="h-full rounded-full bg-coral"
+        className="h-full rounded-full bg-gold"
       />
     </div>
   );

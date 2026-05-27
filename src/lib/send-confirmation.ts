@@ -36,27 +36,27 @@ export async function sendConfirmation(email: string): Promise<void> {
   const html = `
 <!doctype html>
 <html>
-  <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#FAE7CB; color:#194138; margin:0; padding:32px 16px;">
-    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="max-width:560px; margin:0 auto; background:#FCF1DE; border:1px solid #E5CC9F; border-radius:14px;">
+  <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background:#FAFAF7; color:#0F0F0E; margin:0; padding:32px 16px;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="max-width:560px; margin:0 auto; background:#FFFFFF; border:1px solid #E5E5E2; border-radius:14px;">
       <tr>
         <td style="padding:32px 32px 8px 32px;">
-          <div style="font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#E5A53A;">SmartLeads</div>
-          <h1 style="font-family: Georgia, serif; font-weight:400; font-size:28px; line-height:1.2; color:#194138; margin:14px 0 8px 0;">You're in.</h1>
-          <p style="font-size:15px; line-height:1.6; color:#618975; margin:0 0 20px 0;">
+          <div style="font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#B8841C;">SmartLeads</div>
+          <h1 style="font-family: Georgia, serif; font-weight:400; font-size:28px; line-height:1.2; color:#0F0F0E; margin:14px 0 8px 0;">You're in.</h1>
+          <p style="font-size:15px; line-height:1.6; color:#6B6B68; margin:0 0 20px 0;">
             We'll email when the closed beta opens. If you're in the first 100 sign-ups, you've locked in founder pricing for life.
           </p>
-          <div style="border-top:1px solid #E5CC9F; margin:20px 0; padding-top:16px;">
-            <p style="font-size:14px; line-height:1.6; color:#194138; margin:0 0 8px 0;"><strong>What happens next</strong></p>
-            <ul style="font-size:14px; line-height:1.7; color:#618975; padding-left:18px; margin:0;">
+          <div style="border-top:1px solid #E5E5E2; margin:20px 0; padding-top:16px;">
+            <p style="font-size:14px; line-height:1.6; color:#0F0F0E; margin:0 0 8px 0;"><strong>What happens next</strong></p>
+            <ul style="font-size:14px; line-height:1.7; color:#6B6B68; padding-left:18px; margin:0;">
               <li>Closed beta in late Q3 — invite by email.</li>
               <li>Public launch by end of year.</li>
               <li>Beta access goes out in sign-up order.</li>
             </ul>
           </div>
-          <p style="font-size:14px; line-height:1.6; color:#618975; margin:24px 0 0 0;">
-            Questions? Reply to this email or DM me on X: <a href="https://x.com/${founder}" style="color:#194138;">@${founder}</a>.
+          <p style="font-size:14px; line-height:1.6; color:#6B6B68; margin:24px 0 0 0;">
+            Questions? Reply to this email or DM me on X: <a href="https://x.com/${founder}" style="color:#0F0F0E;">@${founder}</a>.
           </p>
-          <p style="font-size:14px; color:#618975; margin:24px 0 0 0; font-style:italic;">— Draj</p>
+          <p style="font-size:14px; color:#6B6B68; margin:24px 0 0 0; font-style:italic;">— Draj</p>
         </td>
       </tr>
     </table>

@@ -23,8 +23,8 @@ export default async function OG() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#194138",
-          color: "#FAE7CB",
+          background: "#0F0F0E",
+          color: "#FAFAF7",
           padding: 80,
           fontFamily: "Georgia, serif",
           position: "relative",
@@ -52,7 +52,7 @@ export default async function OG() {
               height: 56,
               borderRadius: 10,
               background: "#FFC94D",
-              color: "#194138",
+              color: "#0F0F0E",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -80,7 +80,7 @@ export default async function OG() {
             fontSize: 76,
             lineHeight: 1.04,
             letterSpacing: "-0.018em",
-            color: "#FAE7CB",
+            color: "#FAFAF7",
             maxWidth: 1040,
           }}
         >

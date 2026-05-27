@@ -184,8 +184,8 @@ export function WaitlistForm({
         <p className="mt-3 text-xs text-ink-soft">
           <span className="inline-flex items-center gap-1.5">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-70 animate-ping" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sage" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-gold opacity-70 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-gold" />
             </span>
             {proofTemplate.replace("{count}", String(showCount))}
           </span>

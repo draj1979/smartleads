@@ -14,7 +14,7 @@
   --font-display: var(--font-serif);
   --font-serif: var(--font-serif);
 
-  /* SmartLeads brand tokens (palette: ColorHunt 59B292 FFC94D FAE7CB FA6781) */
+  /* SmartLeads brand tokens — monochrome + gold */
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
   --color-paper-card: var(--paper-card);
@@ -24,11 +24,6 @@
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-gold-soft: var(--gold-soft);
-  --color-coral: var(--coral);
-  --color-coral-deep: var(--coral-deep);
-  --color-coral-soft: var(--coral-soft);
-  --color-sage: var(--sage);
-  --color-sage-soft: var(--sage-soft);
 
   /* shadcn tokens (driven by variables in :root / .dark below) */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -69,22 +64,17 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ── Light mode (cream paper + dark-teal ink + gold + coral + sage) ── */
+/* ── Light mode (warm off-white + deep charcoal + gold) ───── */
 :root {
-  --paper:       oklch(0.910 0.038 82);     /* #FAE7CB — base cream */
-  --paper-deep:  oklch(0.860 0.050 82);     /* #F0D7B0 — section bands */
-  --paper-card:  oklch(0.945 0.022 82);     /* #FCF1DE — card surfaces */
-  --ink:         oklch(0.280 0.045 175);    /* #194138 — dark teal (text) */
-  --ink-soft:    oklch(0.500 0.055 170);    /* #618975 — muted sage-grey */
-  --rule:        oklch(0.825 0.045 80);     /* #E5CC9F — cream border */
-  --gold:        oklch(0.830 0.155 88);     /* #FFC94D — primary accent */
-  --gold-deep:   oklch(0.730 0.150 82);     /* hover */
-  --gold-soft:   oklch(0.940 0.060 88);     /* faint wash */
-  --coral:       oklch(0.690 0.170 18);     /* #FA6781 — warm highlight */
-  --coral-deep:  oklch(0.590 0.175 17);     /* hover */
-  --coral-soft:  oklch(0.920 0.045 20);     /* faint wash */
-  --sage:        oklch(0.690 0.085 165);    /* #59B292 — live / positive */
-  --sage-soft:   oklch(0.910 0.040 165);    /* faint wash */
+  --paper:       oklch(0.985 0.003 88);     /* #FAFAF7 — warm off-white */
+  --paper-deep:  oklch(0.960 0.003 88);     /* #F2F2EF — section bands */
+  --paper-card:  oklch(1.000 0 0);          /* pure white card surfaces */
+  --ink:         oklch(0.180 0.005 80);     /* #0F0F0E — deep charcoal */
+  --ink-soft:    oklch(0.460 0.005 80);     /* #6B6B68 — muted gray text */
+  --rule:        oklch(0.910 0.003 85);     /* #E5E5E2 — hairline borders */
+  --gold:        oklch(0.830 0.155 88);     /* #FFC94D — THE accent */
+  --gold-deep:   oklch(0.700 0.150 78);     /* #D69A1E — hover */
+  --gold-soft:   oklch(0.955 0.060 90);     /* #FBEDC9 — faint wash */
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -92,7 +82,7 @@
   --card-foreground: var(--ink);
   --popover: var(--paper-card);
   --popover-foreground: var(--ink);
-  --primary: var(--ink);                    /* primary CTAs are ink on cream */
+  --primary: var(--ink);                    /* primary CTAs = ink on paper */
   --primary-foreground: var(--paper);
   --secondary: var(--paper-deep);
   --secondary-foreground: var(--ink);
@@ -100,15 +90,15 @@
   --muted-foreground: var(--ink-soft);
   --accent: var(--gold);
   --accent-foreground: var(--ink);
-  --destructive: var(--coral-deep);
+  --destructive: oklch(0.577 0.245 27.325);
   --border: var(--rule);
   --input: var(--rule);
   --ring: var(--gold);
   --chart-1: var(--gold);
-  --chart-2: var(--sage);
-  --chart-3: var(--coral);
-  --chart-4: var(--ink-soft);
-  --chart-5: var(--ink);
+  --chart-2: var(--ink);
+  --chart-3: var(--ink-soft);
+  --chart-4: var(--gold-deep);
+  --chart-5: var(--rule);
   --radius: 0.75rem;
 
   --sidebar: var(--paper);
@@ -121,22 +111,17 @@
   --sidebar-ring: var(--gold);
 }
 
-/* ── Dark mode (dark teal bg + cream text + lifted accents) ── */
+/* ── Dark mode (deep charcoal + warm off-white + gold) ───── */
 .dark {
-  --paper:       oklch(0.200 0.035 175);    /* deep teal bg */
-  --paper-deep:  oklch(0.250 0.040 175);
-  --paper-card:  oklch(0.290 0.035 173);
-  --ink:         oklch(0.910 0.032 82);     /* warm cream text */
-  --ink-soft:    oklch(0.690 0.085 165);    /* sage tinted muted text */
-  --rule:        oklch(0.380 0.035 170);
+  --paper:       oklch(0.150 0.003 80);     /* #0A0A09 — near-black */
+  --paper-deep:  oklch(0.200 0.003 80);     /* #181816 — section bands */
+  --paper-card:  oklch(0.235 0.003 80);     /* #1F1F1D — card surfaces */
+  --ink:         oklch(0.970 0.003 88);     /* #F7F7F4 — warm off-white */
+  --ink-soft:    oklch(0.700 0.005 80);     /* mid gray */
+  --rule:        oklch(0.310 0.005 80);     /* dark hairline */
   --gold:        oklch(0.860 0.155 88);
-  --gold-deep:   oklch(0.760 0.150 82);
-  --gold-soft:   oklch(0.340 0.070 88);
-  --coral:       oklch(0.730 0.175 18);
-  --coral-deep:  oklch(0.620 0.180 17);
-  --coral-soft:  oklch(0.320 0.080 20);
-  --sage:        oklch(0.720 0.090 165);
-  --sage-soft:   oklch(0.320 0.060 165);
+  --gold-deep:   oklch(0.760 0.150 80);
+  --gold-soft:   oklch(0.350 0.080 90);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -145,27 +130,27 @@
   --popover: var(--paper-card);
   --popover-foreground: var(--ink);
   --primary: var(--gold);                   /* in dark, primary goes gold for pop */
-  --primary-foreground: oklch(0.200 0.035 175);
+  --primary-foreground: var(--paper);
   --secondary: var(--paper-deep);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-deep);
   --muted-foreground: var(--ink-soft);
   --accent: var(--gold);
-  --accent-foreground: oklch(0.200 0.035 175);
-  --destructive: var(--coral);
+  --accent-foreground: var(--paper);
+  --destructive: oklch(0.704 0.191 22.216);
   --border: var(--rule);
   --input: var(--rule);
   --ring: var(--gold);
   --chart-1: var(--gold);
-  --chart-2: var(--sage);
-  --chart-3: var(--coral);
-  --chart-4: var(--ink-soft);
-  --chart-5: var(--ink);
+  --chart-2: var(--ink);
+  --chart-3: var(--ink-soft);
+  --chart-4: var(--gold-deep);
+  --chart-5: var(--rule);
 
   --sidebar: var(--paper);
   --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--gold);
-  --sidebar-primary-foreground: oklch(0.200 0.035 175);
+  --sidebar-primary-foreground: var(--paper);
   --sidebar-accent: var(--paper-deep);
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--rule);

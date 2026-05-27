@@ -72,8 +72,8 @@ export function FinalCta({ count }: { count: number }) {
           {/* Tiny live count + reassurance row */}
           <p className="mt-4 text-xs text-paper/55 flex items-center justify-center gap-2">
             <span className="relative flex h-1.5 w-1.5" aria-hidden>
-              <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-70 animate-ping" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sage" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-gold opacity-70 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-gold" />
             </span>
             <span>{count} already in · no spam · unsubscribe anytime</span>
           </p>
