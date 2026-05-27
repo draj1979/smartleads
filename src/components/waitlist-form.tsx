@@ -16,8 +16,12 @@ type Props = {
   proofTemplate?: string;
   /** Compact = no proof line (used by Final CTA where its own copy lives outside). */
   compact?: boolean;
-  /** Visual variant: 'on-paper' (default) | 'on-paper-card'. */
-  variant?: "on-paper" | "on-paper-card";
+  /** Visual variant — controls input bg, pill bg, and button color.
+   *  - on-paper: form sits on cream bg, ink button
+   *  - on-paper-card: form sits on lifted paper-card, ink button
+   *  - on-dark: form sits on a dark navy section, amber button (conversion CTA)
+   */
+  variant?: "on-paper" | "on-paper-card" | "on-dark";
   className?: string;
 };
 
@@ -95,14 +99,33 @@ export function WaitlistForm({
   }
 
   /* ── Idle / submitting / error ───────────────────────── */
-  const inputBg = variant === "on-paper-card" ? "bg-paper" : "bg-paper-card";
+  const v = {
+    "on-paper": {
+      pill: "sm:bg-paper-card sm:border-rule",
+      inputBg: "bg-paper-card",
+      button: "bg-ink text-paper hover:opacity-90",
+      ring: "focus:ring-amber/50",
+    },
+    "on-paper-card": {
+      pill: "sm:bg-paper sm:border-rule",
+      inputBg: "bg-paper",
+      button: "bg-ink text-paper hover:opacity-90",
+      ring: "focus:ring-amber/50",
+    },
+    "on-dark": {
+      pill: "sm:bg-paper sm:border-transparent",
+      inputBg: "bg-paper",
+      button: "bg-amber text-ink hover:bg-amber-deep",
+      ring: "focus:ring-amber",
+    },
+  }[variant];
 
   return (
     <div className={className}>
       <form
         onSubmit={onSubmit}
         noValidate
-        className="flex flex-col sm:flex-row sm:items-stretch gap-2 sm:gap-1.5 sm:p-1.5 sm:rounded-full sm:border sm:border-rule sm:bg-paper-card"
+        className={`flex flex-col sm:flex-row sm:items-stretch gap-2 sm:gap-1.5 sm:p-1.5 sm:rounded-full sm:border ${v.pill}`}
       >
         {/* Honeypot — not display:none (some bots skip those); off-screen + tabIndex -1 */}
         <label className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden>
@@ -126,14 +149,14 @@ export function WaitlistForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "submitting"}
-          className={`flex-1 min-w-0 px-5 py-3.5 sm:py-2.5 rounded-full ${inputBg} border border-rule sm:border-0 sm:bg-transparent text-ink placeholder:text-ink-soft/70 outline-none focus:ring-2 focus:ring-amber/50 disabled:opacity-60`}
+          className={`flex-1 min-w-0 px-5 py-3.5 sm:py-2.5 rounded-full ${v.inputBg} border border-rule sm:border-0 sm:bg-transparent text-ink placeholder:text-ink-soft/70 outline-none focus:ring-2 ${v.ring} disabled:opacity-60`}
         />
 
         <button
           type="submit"
           disabled={status === "submitting"}
           data-event={`${source}_cta_click`}
-          className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 sm:py-2.5 rounded-full bg-ink text-paper text-[15px] font-medium hover:opacity-90 transition disabled:opacity-70"
+          className={`inline-flex items-center justify-center gap-1.5 px-5 py-3.5 sm:py-2.5 rounded-full ${v.button} text-[15px] font-medium transition disabled:opacity-70`}
         >
           {status === "submitting" ? (
             <>

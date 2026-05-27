@@ -6,6 +6,7 @@ import { Differentiators } from "@/components/sections/differentiators";
 import { Personas } from "@/components/sections/personas";
 import { Comparison } from "@/components/sections/comparison";
 import { FAQ } from "@/components/sections/faq";
+import { FinalCta } from "@/components/sections/final-cta";
 import { getWaitlistCount } from "@/lib/waitlist";
 
 export const revalidate = 60; // ISR: rebuild count snapshot at most every minute
@@ -24,7 +25,8 @@ export default async function Home() {
         <Personas />
         <Comparison />
         <FAQ />
-        {/* Sections still to land: Final CTA, Footer */}
+        <FinalCta count={count} />
+        {/* Footer is last */}
       </main>
     </>
   );
