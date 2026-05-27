@@ -4,6 +4,7 @@ import { Problem } from "@/components/sections/problem";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Differentiators } from "@/components/sections/differentiators";
 import { Personas } from "@/components/sections/personas";
+import { Comparison } from "@/components/sections/comparison";
 import { getWaitlistCount } from "@/lib/waitlist";
 
 export const revalidate = 60; // ISR: rebuild count snapshot at most every minute
@@ -20,7 +21,8 @@ export default async function Home() {
         <HowItWorks />
         <Differentiators />
         <Personas />
-        {/* Sections still to land: Comparison, FAQ, Final CTA, Footer */}
+        <Comparison />
+        {/* Sections still to land: FAQ, Final CTA, Footer */}
       </main>
     </>
   );
