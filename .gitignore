@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local waitlist store — kept out of git so real dev signups don't
+# end up in a public repo. The file is created automatically on the
+# first POST to /api/waitlist (see src/lib/waitlist.ts).
+/data/waitlist.json
