@@ -19,12 +19,12 @@ export function Personas() {
           transition={{ duration: 0.6, ease }}
           className="max-w-2xl"
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber-deep mb-4">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-deep mb-4">
             {eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.04] tracking-tight text-ink">
             If you sell your time or expertise,{" "}
-            <em className="italic text-amber-deep">you&apos;re in.</em>
+            <em className="italic text-gold-deep">you&apos;re in.</em>
           </h2>
         </motion.div>
 
@@ -41,12 +41,12 @@ export function Personas() {
                 delay: 0.05 + i * 0.06,
                 ease,
               }}
-              className="group bg-paper-card border border-rule rounded-xl p-5 md:p-6 transition hover:-translate-y-0.5 hover:border-amber/50 hover:shadow-[0_18px_36px_-22px_oklch(0.30_0.082_264_/_0.18)]"
+              className="group bg-paper-card border border-rule rounded-xl p-5 md:p-6 transition hover:-translate-y-0.5 hover:border-gold/50 hover:shadow-[0_18px_36px_-22px_oklch(0.30_0.082_264_/_0.18)]"
             >
               <div className="flex items-start gap-3.5">
                 <span
                   aria-hidden
-                  className="text-2xl md:text-[26px] leading-none w-10 h-10 rounded-lg bg-paper border border-rule flex items-center justify-center shrink-0 group-hover:border-amber/40 transition"
+                  className="text-2xl md:text-[26px] leading-none w-10 h-10 rounded-lg bg-paper border border-rule flex items-center justify-center shrink-0 group-hover:border-gold/40 transition"
                 >
                   {p.emoji}
                 </span>

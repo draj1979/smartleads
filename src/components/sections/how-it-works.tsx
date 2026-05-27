@@ -20,7 +20,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, ease }}
           className="max-w-2xl"
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber-deep mb-4">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-deep mb-4">
             {eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.04] tracking-tight text-ink">
@@ -59,7 +59,7 @@ export function HowItWorks() {
                 {/* Number block — the visual anchor */}
                 <div className="flex items-start justify-between mb-5">
                   <span
-                    className="font-display text-[3.75rem] leading-[0.9] text-amber-deep"
+                    className="font-display text-[3.75rem] leading-[0.9] text-gold-deep"
                     aria-hidden
                   >
                     {step.n}
@@ -75,7 +75,7 @@ export function HowItWorks() {
 
                 {/* Icon badge + title row */}
                 <div className="flex items-start gap-3 mb-2.5">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-amber-soft text-amber-deep border border-amber/30 shrink-0">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-gold-soft text-gold-deep border border-gold/30 shrink-0">
                     <Icon size={16} strokeWidth={1.75} />
                   </div>
                   <h3 className="font-display text-[20px] md:text-[22px] leading-[1.2] tracking-tight text-ink pt-1">

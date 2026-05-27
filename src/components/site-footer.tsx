@@ -71,9 +71,9 @@ export function SiteFooter() {
             <a
               href={`mailto:${brand.supportEmail}`}
               data-event="footer_email_click"
-              className="inline-flex items-center gap-1.5 hover:text-amber-deep transition"
+              className="inline-flex items-center gap-1.5 hover:text-gold-deep transition"
             >
-              <Mail size={13} className="text-amber-deep" />
+              <Mail size={13} className="text-gold-deep" />
               {brand.supportEmail}
             </a>
             <a
@@ -81,9 +81,9 @@ export function SiteFooter() {
               target="_blank"
               rel="noreferrer"
               data-event="footer_twitter_click"
-              className="inline-flex items-center gap-1.5 hover:text-amber-deep transition"
+              className="inline-flex items-center gap-1.5 hover:text-gold-deep transition"
             >
-              <XMark className="w-3 h-3 text-amber-deep" />@{brand.founderHandle}
+              <XMark className="w-3 h-3 text-gold-deep" />@{brand.founderHandle}
             </a>
           </div>
 

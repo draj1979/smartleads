@@ -129,28 +129,38 @@ src/
 
 ## Design system
 
-**Palette** — ColorHunt `FFC570 / EFD2B0 / 547792 / 1A3263`:
+**Palette** — ColorHunt `59B292 / FFC94D / FAE7CB / FA6781`:
 
 | Token | Light | Dark | Used for |
 |---|---|---|---|
-| `paper` | cream `#EFD2B0` | navy-deep | page background |
-| `paper-deep` | darker cream | `#1A3263` navy | section bands |
-| `paper-card` | lighter cream | lifted navy | card surfaces |
-| `ink` | `#1A3263` navy | warm cream | text + primary CTA |
-| `ink-soft` | `#547792` slate | lifted slate | muted text, borders |
-| `amber` | `#FFC570` | `#FFC570` | THE accent (CTA + highlights) |
-| `amber-soft` | faint cream-amber | dark amber tint | washes |
-| `rule` | medium cream | dark slate | borders |
+| `paper` | cream `#FAE7CB` | dark teal | page background |
+| `paper-deep` | darker cream | lifted teal | section bands |
+| `paper-card` | lighter cream | lifted teal | card surfaces |
+| `ink` | dark teal `#194138` | warm cream | text + primary CTA |
+| `ink-soft` | muted sage-grey | lifted sage | muted text, borders |
+| `gold` | `#FFC94D` | `#FFC94D` | THE primary accent — CTAs, headlines |
+| `gold-soft` | faint cream-gold | dark gold tint | washes |
+| `coral` | `#FA6781` | lifted coral | warm/urgent — intent score, blinking caret |
+| `coral-soft` | faint pink wash | dark coral tint | intent-score block bg |
+| `sage` | `#59B292` | lifted sage | live/positive — proof ping dots, lead-card status |
+| `rule` | medium cream | dark teal | borders |
 
-**Brief said "ONE accent."** That's amber. Navy and slate are *neutrals* in
-this palette (warm-cool grays). Primary CTAs go navy-on-cream; amber is
-reserved for the highlight moments (Hero kicker, intent score, Final CTA).
+**Three accent roles, each with a job:**
+- **gold** — primary brand accent: CTAs, kicker chip, italic headline emphasis,
+  Differentiators icon badges.
+- **coral** — "warm/urgent" cue: intent-score block bg + label, blinking
+  caret in the lead-card reply preview.
+- **sage** — "live/positive" cue: animated ping dots on the proof line in
+  Hero and Final CTA, lead-card status indicator.
+
+Primary CTAs go ink-on-paper (dark teal on cream). Gold is reserved for the
+highlight moments, including the conversion button in the Final CTA.
 
 **Typography** — Instrument Serif (display, `h1–h4`) + Geist Sans (body) +
 Geist Mono. All via `next/font/google`, self-hosted.
 
-**Page rhythm** — cream / cream-deep / cream / **dark navy** / cream /
-cream-deep / cream / **dark navy** / cream-deep (footer). Two dark "punch"
+**Page rhythm** — cream / cream-deep / cream / **dark teal** / cream /
+cream-deep / cream / **dark teal** / cream-deep (footer). Two dark "punch"
 moments bookend the middle (Differentiators + Final CTA).
 
 ---

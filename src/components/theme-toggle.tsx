@@ -19,7 +19,7 @@ export function ThemeToggle() {
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       data-event="theme_toggle"
-      className="w-9 h-9 rounded-full border border-rule bg-paper-card text-ink-soft hover:text-amber-deep hover:border-amber/40 transition flex items-center justify-center"
+      className="w-9 h-9 rounded-full border border-rule bg-paper-card text-ink-soft hover:text-gold-deep hover:border-gold/40 transition flex items-center justify-center"
     >
       {/* Both rendered, CSS-toggled, so no flash + no layout shift */}
       <Sun className={`w-[15px] h-[15px] ${isDark ? "hidden" : "block"}`} />

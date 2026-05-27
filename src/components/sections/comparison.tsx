@@ -23,7 +23,7 @@ export function Comparison() {
           transition={{ duration: 0.6, ease }}
           className="max-w-2xl"
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber-deep mb-4">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-deep mb-4">
             {eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.04] tracking-tight text-ink">
@@ -46,7 +46,7 @@ export function Comparison() {
           {/* Header row */}
           <div className="grid grid-cols-[1.1fr_1.6fr_1.3fr]">
             <div className="p-5 lg:p-6" />
-            <div className="p-5 lg:p-6 bg-amber-soft border-l border-rule/70">
+            <div className="p-5 lg:p-6 bg-gold-soft border-l border-rule/70">
               <div className="flex items-center gap-2">
                 <div className="w-7 h-7 rounded-md bg-ink text-paper flex items-center justify-center font-display italic text-base leading-none">
                   S
@@ -70,7 +70,7 @@ export function Comparison() {
               <div className="p-5 lg:p-6 text-sm font-medium text-ink-soft">
                 {row.feature}
               </div>
-              <div className="p-5 lg:p-6 bg-amber-soft/60 border-l border-rule/70 text-[14.5px] text-ink leading-relaxed">
+              <div className="p-5 lg:p-6 bg-gold-soft/60 border-l border-rule/70 text-[14.5px] text-ink leading-relaxed">
                 {row.smartleads}
               </div>
               <div className="p-5 lg:p-6 border-l border-rule/70 text-[14.5px] text-ink-soft leading-relaxed">
@@ -108,7 +108,7 @@ export function Comparison() {
               </p>
 
               {/* SmartLeads */}
-              <div className="rounded-lg bg-amber-soft border border-amber/30 px-4 py-3 mb-3">
+              <div className="rounded-lg bg-gold-soft border border-gold/30 px-4 py-3 mb-3">
                 <div className="flex items-center gap-2 mb-1.5">
                   <div className="w-5 h-5 rounded-sm bg-ink text-paper flex items-center justify-center font-display italic text-[11px] leading-none">
                     S

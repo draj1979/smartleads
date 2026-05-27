@@ -22,7 +22,7 @@ export function Problem() {
           transition={{ duration: 0.6, ease }}
           className="max-w-2xl"
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber-deep mb-4">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-deep mb-4">
             {eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.04] tracking-tight text-ink">

@@ -23,14 +23,14 @@ export default async function OG() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          background: "#1A3263",
-          color: "#EFD2B0",
+          background: "#194138",
+          color: "#FAE7CB",
           padding: 80,
           fontFamily: "Georgia, serif",
           position: "relative",
         }}
       >
-        {/* Subtle amber wash */}
+        {/* Subtle gold wash */}
         <div
           style={{
             position: "absolute",
@@ -40,7 +40,7 @@ export default async function OG() {
             height: 560,
             borderRadius: 9999,
             background:
-              "radial-gradient(closest-side, rgba(255,197,112,0.35), transparent)",
+              "radial-gradient(closest-side, rgba(255,201,77,0.35), transparent)",
           }}
         />
 
@@ -51,8 +51,8 @@ export default async function OG() {
               width: 56,
               height: 56,
               borderRadius: 10,
-              background: "#FFC570",
-              color: "#1A3263",
+              background: "#FFC94D",
+              color: "#194138",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -80,7 +80,7 @@ export default async function OG() {
             fontSize: 76,
             lineHeight: 1.04,
             letterSpacing: "-0.018em",
-            color: "#EFD2B0",
+            color: "#FAE7CB",
             maxWidth: 1040,
           }}
         >
@@ -92,7 +92,7 @@ export default async function OG() {
           style={{
             marginTop: 28,
             fontSize: 24,
-            color: "#FFC570",
+            color: "#FFC94D",
             fontStyle: "italic",
             letterSpacing: "-0.005em",
           }}

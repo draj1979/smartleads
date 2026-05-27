@@ -52,12 +52,12 @@ export function FAQ() {
           transition={{ duration: 0.6, ease }}
           className="lg:col-span-5 lg:sticky lg:top-24 self-start"
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber-deep mb-4">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-deep mb-4">
             {eyebrow}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.04] tracking-tight text-ink">
             Everything{" "}
-            <em className="italic text-amber-deep">I&apos;d ask</em> if I were
+            <em className="italic text-gold-deep">I&apos;d ask</em> if I were
             you.
           </h2>
 
@@ -70,9 +70,9 @@ export function FAQ() {
               <a
                 href={`mailto:${contact.email}`}
                 data-event="faq_email_click"
-                className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-amber-deep transition"
+                className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-gold-deep transition"
               >
-                <Mail size={14} className="text-amber-deep" />
+                <Mail size={14} className="text-gold-deep" />
                 {contact.email}
               </a>
               <a
@@ -80,9 +80,9 @@ export function FAQ() {
                 target="_blank"
                 rel="noreferrer"
                 data-event="faq_twitter_click"
-                className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-amber-deep transition"
+                className="inline-flex items-center gap-2 text-sm text-ink-soft hover:text-gold-deep transition"
               >
-                <MessageCircle size={14} className="text-amber-deep" />
+                <MessageCircle size={14} className="text-gold-deep" />
                 {contact.twitterLabel}
               </a>
             </div>

@@ -25,11 +25,11 @@ export function FinalCta({ count }: { count: number }) {
       {/* Amber atmosphere */}
       <div
         aria-hidden
-        className="absolute top-0 right-1/4 w-[28rem] h-[28rem] rounded-full bg-amber/18 blur-3xl pointer-events-none"
+        className="absolute top-0 right-1/4 w-[28rem] h-[28rem] rounded-full bg-gold/18 blur-3xl pointer-events-none"
       />
       <div
         aria-hidden
-        className="absolute bottom-0 left-1/3 w-[24rem] h-[24rem] rounded-full bg-amber/10 blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-1/3 w-[24rem] h-[24rem] rounded-full bg-gold/10 blur-3xl pointer-events-none"
       />
 
       <div className="relative max-w-3xl mx-auto px-5 md:px-10 py-24 md:py-32 text-center">
@@ -39,14 +39,14 @@ export function FinalCta({ count }: { count: number }) {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease }}
         >
-          <p className="text-xs uppercase tracking-[0.22em] text-amber mb-5">
+          <p className="text-xs uppercase tracking-[0.22em] text-gold mb-5">
             {eyebrow}
           </p>
 
           <h2 className="font-display text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.02] tracking-tight text-paper">
             {headline}
             <br />
-            <em className="italic text-amber">{accent}</em>
+            <em className="italic text-gold">{accent}</em>
           </h2>
 
           <p className="mt-7 max-w-xl mx-auto text-base md:text-lg text-paper/70 leading-relaxed">
@@ -72,8 +72,8 @@ export function FinalCta({ count }: { count: number }) {
           {/* Tiny live count + reassurance row */}
           <p className="mt-4 text-xs text-paper/55 flex items-center justify-center gap-2">
             <span className="relative flex h-1.5 w-1.5" aria-hidden>
-              <span className="absolute inline-flex h-full w-full rounded-full bg-amber opacity-70 animate-ping" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-70 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sage" />
             </span>
             <span>{count} already in · no spam · unsubscribe anytime</span>
           </p>

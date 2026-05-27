@@ -14,17 +14,21 @@
   --font-display: var(--font-serif);
   --font-serif: var(--font-serif);
 
-  /* SmartLeads brand tokens (palette: ColorHunt FFC570 EFD2B0 547792 1A3263) */
+  /* SmartLeads brand tokens (palette: ColorHunt 59B292 FFC94D FAE7CB FA6781) */
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep);
   --color-paper-card: var(--paper-card);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-rule: var(--rule);
-  --color-amber: var(--amber);
-  --color-amber-deep: var(--amber-deep);
-  --color-amber-soft: var(--amber-soft);
-  --color-slate-mark: var(--slate-mark);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-soft: var(--gold-soft);
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
+  --color-coral-soft: var(--coral-soft);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
 
   /* shadcn tokens (driven by variables in :root / .dark below) */
   --color-sidebar-ring: var(--sidebar-ring);
@@ -65,18 +69,22 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* ── Light mode (cream paper + navy ink + amber accent) ──── */
+/* ── Light mode (cream paper + dark-teal ink + gold + coral + sage) ── */
 :root {
-  --paper:      oklch(0.875 0.054 76);    /* #EFD2B0 — base cream */
-  --paper-deep: oklch(0.820 0.060 76);    /* #E5C297 — section bands */
-  --paper-card: oklch(0.925 0.038 76);    /* #F5E1C0 — card surfaces */
-  --ink:        oklch(0.300 0.082 264);   /* #1A3263 — deep navy */
-  --ink-soft:   oklch(0.520 0.052 244);   /* #547792 — slate */
-  --slate-mark: oklch(0.520 0.052 244);   /* alias for chips/marks */
-  --rule:       oklch(0.760 0.062 75);    /* #D4B587 */
-  --amber:      oklch(0.840 0.130 80);    /* #FFC570 — accent */
-  --amber-deep: oklch(0.720 0.135 70);    /* #E8A847 — hover */
-  --amber-soft: oklch(0.930 0.055 80);    /* #FFE9CB — faint wash */
+  --paper:       oklch(0.910 0.038 82);     /* #FAE7CB — base cream */
+  --paper-deep:  oklch(0.860 0.050 82);     /* #F0D7B0 — section bands */
+  --paper-card:  oklch(0.945 0.022 82);     /* #FCF1DE — card surfaces */
+  --ink:         oklch(0.280 0.045 175);    /* #194138 — dark teal (text) */
+  --ink-soft:    oklch(0.500 0.055 170);    /* #618975 — muted sage-grey */
+  --rule:        oklch(0.825 0.045 80);     /* #E5CC9F — cream border */
+  --gold:        oklch(0.830 0.155 88);     /* #FFC94D — primary accent */
+  --gold-deep:   oklch(0.730 0.150 82);     /* hover */
+  --gold-soft:   oklch(0.940 0.060 88);     /* faint wash */
+  --coral:       oklch(0.690 0.170 18);     /* #FA6781 — warm highlight */
+  --coral-deep:  oklch(0.590 0.175 17);     /* hover */
+  --coral-soft:  oklch(0.920 0.045 20);     /* faint wash */
+  --sage:        oklch(0.690 0.085 165);    /* #59B292 — live / positive */
+  --sage-soft:   oklch(0.910 0.040 165);    /* faint wash */
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -84,23 +92,23 @@
   --card-foreground: var(--ink);
   --popover: var(--paper-card);
   --popover-foreground: var(--ink);
-  --primary: var(--ink);                  /* primary CTAs are navy on cream */
+  --primary: var(--ink);                    /* primary CTAs are ink on cream */
   --primary-foreground: var(--paper);
   --secondary: var(--paper-deep);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-deep);
   --muted-foreground: var(--ink-soft);
-  --accent: var(--amber);                 /* accent CTAs / highlights */
+  --accent: var(--gold);
   --accent-foreground: var(--ink);
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: var(--coral-deep);
   --border: var(--rule);
   --input: var(--rule);
-  --ring: var(--amber);
-  --chart-1: var(--amber);
-  --chart-2: var(--ink);
-  --chart-3: var(--ink-soft);
-  --chart-4: oklch(0.62 0.06 150);
-  --chart-5: oklch(0.45 0.08 30);
+  --ring: var(--gold);
+  --chart-1: var(--gold);
+  --chart-2: var(--sage);
+  --chart-3: var(--coral);
+  --chart-4: var(--ink-soft);
+  --chart-5: var(--ink);
   --radius: 0.75rem;
 
   --sidebar: var(--paper);
@@ -110,21 +118,25 @@
   --sidebar-accent: var(--paper-deep);
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--rule);
-  --sidebar-ring: var(--amber);
+  --sidebar-ring: var(--gold);
 }
 
-/* ── Dark mode (navy bg + cream ink + slate muted + amber stays) ── */
+/* ── Dark mode (dark teal bg + cream text + lifted accents) ── */
 .dark {
-  --paper:      oklch(0.230 0.072 264);   /* darker navy than #1A3263 */
-  --paper-deep: oklch(0.280 0.078 264);   /* #1A3263 itself — section bands */
-  --paper-card: oklch(0.330 0.068 262);   /* lifted navy card */
-  --ink:        oklch(0.880 0.046 78);    /* warm cream text */
-  --ink-soft:   oklch(0.640 0.052 244);   /* lifted slate */
-  --slate-mark: oklch(0.640 0.052 244);
-  --rule:       oklch(0.400 0.060 250);
-  --amber:      oklch(0.850 0.135 80);    /* amber stays warm */
-  --amber-deep: oklch(0.760 0.140 72);
-  --amber-soft: oklch(0.330 0.070 80);
+  --paper:       oklch(0.200 0.035 175);    /* deep teal bg */
+  --paper-deep:  oklch(0.250 0.040 175);
+  --paper-card:  oklch(0.290 0.035 173);
+  --ink:         oklch(0.910 0.032 82);     /* warm cream text */
+  --ink-soft:    oklch(0.690 0.085 165);    /* sage tinted muted text */
+  --rule:        oklch(0.380 0.035 170);
+  --gold:        oklch(0.860 0.155 88);
+  --gold-deep:   oklch(0.760 0.150 82);
+  --gold-soft:   oklch(0.340 0.070 88);
+  --coral:       oklch(0.730 0.175 18);
+  --coral-deep:  oklch(0.620 0.180 17);
+  --coral-soft:  oklch(0.320 0.080 20);
+  --sage:        oklch(0.720 0.090 165);
+  --sage-soft:   oklch(0.320 0.060 165);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -132,32 +144,32 @@
   --card-foreground: var(--ink);
   --popover: var(--paper-card);
   --popover-foreground: var(--ink);
-  --primary: var(--amber);                /* dark mode CTAs go amber for pop */
-  --primary-foreground: oklch(0.230 0.072 264);
+  --primary: var(--gold);                   /* in dark, primary goes gold for pop */
+  --primary-foreground: oklch(0.200 0.035 175);
   --secondary: var(--paper-deep);
   --secondary-foreground: var(--ink);
   --muted: var(--paper-deep);
   --muted-foreground: var(--ink-soft);
-  --accent: var(--amber);
-  --accent-foreground: oklch(0.230 0.072 264);
-  --destructive: oklch(0.704 0.191 22.216);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.200 0.035 175);
+  --destructive: var(--coral);
   --border: var(--rule);
   --input: var(--rule);
-  --ring: var(--amber);
-  --chart-1: var(--amber);
-  --chart-2: var(--ink);
-  --chart-3: var(--ink-soft);
-  --chart-4: oklch(0.65 0.06 150);
-  --chart-5: oklch(0.62 0.08 30);
+  --ring: var(--gold);
+  --chart-1: var(--gold);
+  --chart-2: var(--sage);
+  --chart-3: var(--coral);
+  --chart-4: var(--ink-soft);
+  --chart-5: var(--ink);
 
   --sidebar: var(--paper);
   --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--amber);
-  --sidebar-primary-foreground: oklch(0.230 0.072 264);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: oklch(0.200 0.035 175);
   --sidebar-accent: var(--paper-deep);
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--rule);
-  --sidebar-ring: var(--amber);
+  --sidebar-ring: var(--gold);
 }
 
 @layer base {

@@ -19,7 +19,7 @@ type Props = {
   /** Visual variant — controls input bg, pill bg, and button color.
    *  - on-paper: form sits on cream bg, ink button
    *  - on-paper-card: form sits on lifted paper-card, ink button
-   *  - on-dark: form sits on a dark navy section, amber button (conversion CTA)
+   *  - on-dark: form sits on a dark navy section, gold button (conversion CTA)
    */
   variant?: "on-paper" | "on-paper-card" | "on-dark";
   className?: string;
@@ -85,9 +85,9 @@ export function WaitlistForm({
       <div
         role="status"
         aria-live="polite"
-        className={`flex items-start gap-3 p-4 rounded-2xl border border-amber/40 bg-amber-soft/70 text-ink ${className}`}
+        className={`flex items-start gap-3 p-4 rounded-2xl border border-gold/40 bg-gold-soft/70 text-ink ${className}`}
       >
-        <div className="w-8 h-8 rounded-full bg-amber text-ink flex items-center justify-center shrink-0">
+        <div className="w-8 h-8 rounded-full bg-gold text-ink flex items-center justify-center shrink-0">
           <Check size={16} strokeWidth={2.5} />
         </div>
         <div className="leading-snug">
@@ -104,19 +104,19 @@ export function WaitlistForm({
       pill: "sm:bg-paper-card sm:border-rule",
       inputBg: "bg-paper-card",
       button: "bg-ink text-paper hover:opacity-90",
-      ring: "focus:ring-amber/50",
+      ring: "focus:ring-gold/50",
     },
     "on-paper-card": {
       pill: "sm:bg-paper sm:border-rule",
       inputBg: "bg-paper",
       button: "bg-ink text-paper hover:opacity-90",
-      ring: "focus:ring-amber/50",
+      ring: "focus:ring-gold/50",
     },
     "on-dark": {
       pill: "sm:bg-paper sm:border-transparent",
       inputBg: "bg-paper",
-      button: "bg-amber text-ink hover:bg-amber-deep",
-      ring: "focus:ring-amber",
+      button: "bg-gold text-ink hover:bg-gold-deep",
+      ring: "focus:ring-gold",
     },
   }[variant];
 
@@ -184,8 +184,8 @@ export function WaitlistForm({
         <p className="mt-3 text-xs text-ink-soft">
           <span className="inline-flex items-center gap-1.5">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-amber opacity-70 animate-ping" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-sage opacity-70 animate-ping" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-sage" />
             </span>
             {proofTemplate.replace("{count}", String(showCount))}
           </span>

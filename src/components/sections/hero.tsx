@@ -29,8 +29,8 @@ export function Hero({ count }: { count: number }) {
           className="lg:col-span-7 lg:pt-4"
         >
           {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs bg-amber-soft border border-amber/40 text-ink mb-7">
-            <Sparkles size={12} className="text-amber-deep" />
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs bg-gold-soft border border-gold/40 text-ink mb-7">
+            <Sparkles size={12} className="text-gold-deep" />
             {CONTENT.hero.eyebrow}
           </div>
 
@@ -81,14 +81,14 @@ function LeadCard() {
 
   return (
     <div className="relative">
-      {/* Soft amber wash behind the card to anchor it visually */}
+      {/* Soft gold wash behind the card to anchor it visually */}
       <div
         aria-hidden
-        className="absolute -top-8 -right-10 w-44 h-44 rounded-full bg-amber/30 blur-3xl -z-10"
+        className="absolute -top-8 -right-10 w-44 h-44 rounded-full bg-gold/30 blur-3xl -z-10"
       />
       <div
         aria-hidden
-        className="absolute -bottom-10 -left-8 w-40 h-40 rounded-full bg-amber-soft blur-3xl -z-10"
+        className="absolute -bottom-10 -left-8 w-40 h-40 rounded-full bg-gold-soft blur-3xl -z-10"
       />
 
       <div className="relative bg-paper-card border border-rule rounded-2xl shadow-[0_30px_60px_-25px_oklch(0.30_0.082_264_/_0.28)] overflow-hidden">
@@ -125,7 +125,7 @@ function LeadCard() {
           </p>
 
           {/* ── Intent score block ───────────────────────── */}
-          <div className="rounded-xl border border-amber/40 bg-amber-soft/70 px-4 py-3.5 mb-4">
+          <div className="rounded-xl border border-coral/40 bg-coral-soft/70 px-4 py-3.5 mb-4">
             <div className="flex items-baseline justify-between mb-2">
               <div className="flex items-baseline gap-1.5">
                 <span className="font-display text-4xl leading-none text-ink">
@@ -133,7 +133,7 @@ function LeadCard() {
                 </span>
                 <span className="text-sm text-ink-soft">/ 100</span>
               </div>
-              <span className="text-xs font-medium uppercase tracking-[0.12em] text-amber-deep">
+              <span className="text-xs font-medium uppercase tracking-[0.12em] text-coral-deep">
                 {card.intentLabel}
               </span>
             </div>
@@ -155,7 +155,7 @@ function LeadCard() {
 
           {/* Reply preview */}
           <div className="rounded-xl bg-paper border border-rule/80 p-4">
-            <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em] text-amber-deep mb-2">
+            <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.16em] text-gold-deep mb-2">
               <Wand2 size={11} />
               {card.replyLabel}
             </div>
@@ -167,7 +167,7 @@ function LeadCard() {
               ))}
               <span
                 aria-hidden
-                className="inline-block w-2 h-3.5 bg-amber animate-pulse ml-0.5 align-baseline -mb-0.5"
+                className="inline-block w-2 h-3.5 bg-coral animate-pulse ml-0.5 align-baseline -mb-0.5"
               />
             </div>
           </div>
@@ -194,7 +194,7 @@ function LeadCard() {
         {/* Quiet status footer */}
         <div className="px-5 py-2.5 border-t border-rule/60 flex items-center justify-between text-[11px] text-ink-soft">
           <span className="inline-flex items-center gap-1.5">
-            <CircleDot size={10} className="text-amber" />
+            <CircleDot size={10} className="text-sage" />
             5 of 12 leads today
           </span>
           <span className="font-mono uppercase tracking-wider">guardrails on</span>
@@ -213,7 +213,7 @@ function IntentBar({ value }: { value: number }) {
         whileInView={{ width: `${value}%` }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 1.1, ease }}
-        className="h-full rounded-full bg-amber"
+        className="h-full rounded-full bg-coral"
       />
     </div>
   );
