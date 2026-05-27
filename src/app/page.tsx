@@ -1,4 +1,5 @@
 import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/sections/hero";
 import { Problem } from "@/components/sections/problem";
 import { HowItWorks } from "@/components/sections/how-it-works";
@@ -26,8 +27,8 @@ export default async function Home() {
         <Comparison />
         <FAQ />
         <FinalCta count={count} />
-        {/* Footer is last */}
       </main>
+      <SiteFooter />
     </>
   );
 }
